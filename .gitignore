@@ -1,0 +1,114 @@
+
+Podfile.lock
+
+Pods/Alamofire/LICENSE
+
+Pods/Alamofire/README.md
+
+Pods/Alamofire/Source/AFError.swift
+
+Pods/Alamofire/Source/Alamofire.swift
+
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+
+Pods/Alamofire/Source/MultipartFormData.swift
+
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+
+Pods/Alamofire/Source/Notifications.swift
+
+Pods/Alamofire/Source/ParameterEncoding.swift
+
+Pods/Alamofire/Source/Request.swift
+
+Pods/Alamofire/Source/Response.swift
+
+Pods/Alamofire/Source/ResponseSerialization.swift
+
+Pods/Alamofire/Source/Result.swift
+
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+
+Pods/Alamofire/Source/SessionDelegate.swift
+
+Pods/Alamofire/Source/SessionManager.swift
+
+Pods/Alamofire/Source/TaskDelegate.swift
+
+Pods/Alamofire/Source/Timeline.swift
+
+Pods/Alamofire/Source/Validation.swift
+
+Pods/KDCircularProgress/KDCircularProgress/KDCircularProgress.swift
+
+Pods/KDCircularProgress/LICENSE
+
+Pods/KDCircularProgress/README.md
+
+Pods/Manifest.lock
+
+Pods/Pods.xcodeproj/project.pbxproj
+
+Pods/Pods.xcodeproj/xcuserdata/Denes.xcuserdatad/xcschemes/Alamofire.xcscheme
+
+Pods/Pods.xcodeproj/xcuserdata/Denes.xcuserdatad/xcschemes/KDCircularProgress.xcscheme
+
+Pods/Pods.xcodeproj/xcuserdata/Denes.xcuserdatad/xcschemes/Pods-FeelingsApp.xcscheme
+
+Pods/Pods.xcodeproj/xcuserdata/Denes.xcuserdatad/xcschemes/xcschememanagement.plist
+
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+
+Pods/Target Support Files/Alamofire/Info.plist
+
+Pods/Target Support Files/KDCircularProgress/Info.plist
+
+Pods/Target Support Files/KDCircularProgress/KDCircularProgress-dummy.m
+
+Pods/Target Support Files/KDCircularProgress/KDCircularProgress-prefix.pch
+
+Pods/Target Support Files/KDCircularProgress/KDCircularProgress-umbrella.h
+
+Pods/Target Support Files/KDCircularProgress/KDCircularProgress.modulemap
+
+Pods/Target Support Files/KDCircularProgress/KDCircularProgress.xcconfig
+
+Pods/Target Support Files/Pods-FeelingsApp/Info.plist
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp-acknowledgements.markdown
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp-acknowledgements.plist
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp-dummy.m
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp-frameworks.sh
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp-resources.sh
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp-umbrella.h
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp.debug.xcconfig
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp.modulemap
+
+Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp.release.xcconfig
+
+FeelingsApp.xcworkspace/xcuserdata/Denes.xcuserdatad/UserInterfaceState.xcuserstate
+
+FeelingsApp.xcodeproj/project.pbxproj
+
+FeelingsApp.xcodeproj/project.pbxproj
+
+FeelingsApp.xcodeproj/project.xcworkspace/xcuserdata/Denes.xcuserdatad/UserInterfaceState.xcuserstate
+
+FeelingsApp.xcodeproj/project.pbxproj
+
+FeelingsApp/Dori.png

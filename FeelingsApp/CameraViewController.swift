@@ -10,18 +10,19 @@ import UIKit
 import AVFoundation
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    var boolVal: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCameraSession()
+      //  setupCameraSession()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        view.layer.addSublayer(previewLayer)
+     //   view.layer.addSublayer(previewLayer)
         
-        cameraSession.startRunning()
+      //  cameraSession.startRunning()
     }
     
     lazy var cameraSession: AVCaptureSession = {
@@ -71,8 +72,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         // Here you collect each frame and process it
+        if boolVal {
         if let image = imageFromSampleBuffer(sampleBuffer: sampleBuffer) {
+            //Now use image to create into NSData format
+            let imageData:NSData = UIImagePNGRepresentation(image)! as NSData
+            let strBase64:String = imageData.base64EncodedString(options: .lineLength64Characters)
+            WebService.PostImage(image: strBase64)
             print (image)
+        }
+        boolVal = false
         }
         
     }
@@ -84,28 +92,28 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     func imageFromSampleBuffer(sampleBuffer: CMSampleBuffer) -> UIImage? {
         // Get a CMSampleBuffer's Core Video image buffer for the media data
-        var imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+        let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         // Lock the base address of the pixel buffer
         CVPixelBufferLockBaseAddress(imageBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         
         // Get the number of bytes per row for the pixel buffer
-        var baseAddress = CVPixelBufferGetBaseAddress(imageBuffer!)
+        let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer!)
         
         // Get the number of bytes per row for the pixel buffer
-        var bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer!)
+        let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer!)
         // Get the pixel buffer width and height
-        var width = CVPixelBufferGetWidth(imageBuffer!)
-        var height = CVPixelBufferGetHeight(imageBuffer!)
+        let width = CVPixelBufferGetWidth(imageBuffer!)
+        let height = CVPixelBufferGetHeight(imageBuffer!)
         
         // Create a device-dependent RGB color space
-        var colorSpace = CGColorSpaceCreateDeviceRGB()
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
         
         // Create a bitmap graphics context with the sample buffer data
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.noneSkipLast.rawValue)
-        var context = CGContext(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+        let context = CGContext(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
         // Create a Quartz image from the pixel data in the bitmap graphics context
         if let context = context {
-            var quartzImage = context.makeImage()
+            let quartzImage = context.makeImage()
             
             // Unlock the pixel buffer
             
@@ -119,5 +127,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         else {
             return nil}
     }
+    
+    
+    @IBAction func setBoolValue(_ sender: Any) {
+        boolVal = true
+        
+    }
+    
     
 }
