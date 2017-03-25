@@ -74,10 +74,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         // Here you collect each frame and process it
         if boolVal {
         if let image = imageFromSampleBuffer(sampleBuffer: sampleBuffer) {
-            //Now use image to create into NSData format
-            let imageData:NSData = UIImagePNGRepresentation(image)! as NSData
-            let strBase64:String = imageData.base64EncodedString(options: .lineLength64Characters)
-            WebService.PostImage(image: strBase64)
+            WebService.PostImage(image: image)
             print (image)
         }
         boolVal = false
