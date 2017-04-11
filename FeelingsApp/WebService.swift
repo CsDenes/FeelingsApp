@@ -15,8 +15,8 @@ class WebService {
     
     
     class func PostImage(image: UIImage){
-        let postURI = "http://127.0.0.1:8000/images/" //"https://csd1994.pythonanywhere.com/api/FeelREST/"
-//        let startIndex = image.index(image.startIndex, offsetBy: 0)
+        let postURI = "http://192.168.21.123:8000/images/" //
+        //        let startIndex = image.index(image.startIndex, offsetBy: 0)
 //        let endIndex = image.index(image.startIndex, offsetBy: 200)
         let imageData:NSData = UIImagePNGRepresentation(image)! as NSData
         let strBase64:String = imageData.base64EncodedString(options: .lineLength64Characters)
@@ -44,6 +44,10 @@ class WebService {
             
                 let str = response.result.value as! String
                 let dict = convertToDictionary(text: str)
+            
+            
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ChangeIndicators"), object: nil, userInfo: dict)
+            
                 print((dict?["ha"] as! Double))
             
                      }

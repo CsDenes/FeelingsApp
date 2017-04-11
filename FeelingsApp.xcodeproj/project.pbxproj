@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		85AD18893B81702CE32635D5 /* Pods_FeelingsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80B066F11A2EADF70D7D490 /* Pods_FeelingsApp.framework */; };
+		94358E501E95057400A6899E /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94358E4F1E95057400A6899E /* test.jpg */; };
 		944A50841E73F75600D654D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A50831E73F75600D654D6 /* AppDelegate.swift */; };
 		944A50861E73F75600D654D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A50851E73F75600D654D6 /* ViewController.swift */; };
 		944A50891E73F75600D654D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944A50871E73F75600D654D6 /* Main.storyboard */; };
@@ -18,6 +19,9 @@
 		944A50B51E74031F00D654D6 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A50B41E74031F00D654D6 /* IndicatorViewController.swift */; };
 		944A50B81E74035D00D654D6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A50B71E74035D00D654D6 /* WebService.swift */; };
 		9493A7721E86E0620059D12D /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 9493A7711E86E0620059D12D /* testImage.png */; };
+		9493A7741E8986E50059D12D /* Dori.png in Resources */ = {isa = PBXBuildFile; fileRef = 9493A7731E8986E50059D12D /* Dori.png */; };
+		9493A7761E89ADCD0059D12D /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493A7751E89ADCD0059D12D /* ImageProcessor.swift */; };
+		94B6FA061E90F7A600C2610E /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94B6FA051E90F7A600C2610E /* background.jpg */; };
 		94EFC2991E808F34001C9D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EFC2981E808F34001C9D11 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,7 @@
 /* Begin PBXFileReference section */
 		2DF8BE6667F1E1E26208FE46 /* Pods-FeelingsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp.release.xcconfig"; sourceTree = "<group>"; };
 		6B76C457D4A20061D90877B1 /* Pods-FeelingsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingsApp/Pods-FeelingsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		94358E4F1E95057400A6899E /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		944A50801E73F75600D654D6 /* FeelingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		944A50831E73F75600D654D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		944A50851E73F75600D654D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +62,9 @@
 		944A50B41E74031F00D654D6 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
 		944A50B71E74035D00D654D6 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		9493A7711E86E0620059D12D /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
+		9493A7731E8986E50059D12D /* Dori.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dori.png; sourceTree = "<group>"; };
+		9493A7751E89ADCD0059D12D /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		94B6FA051E90F7A600C2610E /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		94EFC2981E808F34001C9D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C80B066F11A2EADF70D7D490 /* Pods_FeelingsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeelingsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,7 +137,10 @@
 		944A50821E73F75600D654D6 /* FeelingsApp */ = {
 			isa = PBXGroup;
 			children = (
+				94B6FA051E90F7A600C2610E /* background.jpg */,
 				9493A7711E86E0620059D12D /* testImage.png */,
+				94358E4F1E95057400A6899E /* test.jpg */,
+				9493A7731E8986E50059D12D /* Dori.png */,
 				94EFC2981E808F34001C9D11 /* Assets.xcassets */,
 				944A50B61E74032700D654D6 /* Model */,
 				944A50B31E73F8D900D654D6 /* ViewControllers */,
@@ -173,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				944A50B71E74035D00D654D6 /* WebService.swift */,
+				9493A7751E89ADCD0059D12D /* ImageProcessor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -248,6 +260,7 @@
 				TargetAttributes = {
 					944A507F1E73F75600D654D6 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4AP33E9U3G;
 						ProvisioningStyle = Automatic;
 					};
 					944A50931E73F75600D654D6 = {
@@ -289,6 +302,9 @@
 			files = (
 				944A508E1E73F75600D654D6 /* LaunchScreen.storyboard in Resources */,
 				94EFC2991E808F34001C9D11 /* Assets.xcassets in Resources */,
+				94358E501E95057400A6899E /* test.jpg in Resources */,
+				9493A7741E8986E50059D12D /* Dori.png in Resources */,
+				94B6FA061E90F7A600C2610E /* background.jpg in Resources */,
 				944A50891E73F75600D654D6 /* Main.storyboard in Resources */,
 				9493A7721E86E0620059D12D /* testImage.png in Resources */,
 			);
@@ -367,6 +383,7 @@
 				944A50861E73F75600D654D6 /* ViewController.swift in Sources */,
 				944A50841E73F75600D654D6 /* AppDelegate.swift in Sources */,
 				944A50B81E74035D00D654D6 /* WebService.swift in Sources */,
+				9493A7761E89ADCD0059D12D /* ImageProcessor.swift in Sources */,
 				944A50B21E73F8AB00D654D6 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,7 +535,9 @@
 			baseConfigurationReference = 6B76C457D4A20061D90877B1 /* Pods-FeelingsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4AP33E9U3G;
 				INFOPLIST_FILE = FeelingsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Denes.FeelingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,7 +550,9 @@
 			baseConfigurationReference = 2DF8BE6667F1E1E26208FE46 /* Pods-FeelingsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4AP33E9U3G;
 				INFOPLIST_FILE = FeelingsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Denes.FeelingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

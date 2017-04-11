@@ -15,9 +15,18 @@ class IndicatorViewController: UIViewController {
     
     @IBOutlet weak var faceImage: UIImageView!
     
-    @IBOutlet var progressHa: KDCircularProgress!
-
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var progressAn: KDCircularProgress!
+    
+    @IBOutlet weak var progressDi: KDCircularProgress!
+    
+    @IBOutlet weak var progressFe: KDCircularProgress!
+    
+    @IBOutlet weak var progressHa: KDCircularProgress!
+    
+    @IBOutlet weak var progressSa: KDCircularProgress!
+    
+    @IBOutlet weak var progressSu: KDCircularProgress!
+    
     
     @IBOutlet weak var waveformView: SwiftSiriWaveformView!
     
@@ -27,35 +36,31 @@ class IndicatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testLabel.text = "Happy"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeImage), name: Notification.Name("ChangeImage"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeIndicators(_:)), name: NSNotification.Name(rawValue: "ChangeIndicators"), object: nil)
+        
         
         self.waveformView.density = 1.0
         
         timer = Timer.scheduledTimer(timeInterval: 0.009, target: self, selector: #selector(IndicatorViewController.refreshAudioView(_:)), userInfo: nil, repeats: true)
         
-        progressHa.animate(fromAngle: 0, toAngle: 240, duration: 5) { completed in
-            if completed {
-                print("animation stopped, completed")
-            } else {
-                print("animation stopped, was interrupted")
-            }
-        }
+     
         
         
         
-        let image = UIImage(named: "testImage.png")
-        let imageBlackAndWhite = blackAndWhiteImage(image: image!)
-        self.faceImage.layer.cornerRadius = faceImage.frame.size.width/2
+        let image = UIImage(named: "Dori.png")
+        ImageProcessor.shared.detectFace(imageToDetect: image!)
         self.faceImage.layer.masksToBounds = true
-
+        self.faceImage.layer.cornerRadius = faceImage.frame.size.width/3
+        self.faceImage.layer.masksToBounds = true
+        self.faceImage.image = ImageProcessor.shared.faceImage
+        self.faceImage.fadeIn()
         
-        self.faceImage.image = imageBlackAndWhite
         
+      //  WebService.PostImage(image: image!)
         
-        WebService.PostImage(image: image!)
-        
-
-        // Do any additional setup after loading the view.
     }
     
     
@@ -70,6 +75,46 @@ class IndicatorViewController: UIViewController {
     
     
     
+    func changeImage() {
+        print("changeImage")
+     //   self.faceImage.fadeOut()
+      //  self.faceImage.alpha = 0.0
+        //self.faceImage.image = ImageProcessor.shared.faceImage
+        DispatchQueue.main.async(){
+            self.faceImage.image = ImageProcessor.shared.faceViewImage
+        }
+
+        
+      //  self.faceImage.fadeIn()
+        
+    }
+    
+    func changeIndicators(_ notification: NSNotification) {
+        if let value = notification.userInfo?["an"] as? Double {
+            progressAn.animate(toAngle: (value * 360), duration: 3) { completed in
+                if completed {
+                    print("animation stopped, completed")
+                } else {
+                    print("animation stopped, was interrupted")
+                }
+            }
+        }
+        
+        if let value = notification.userInfo?["di"] as? Double {
+            progressDi.animate(toAngle: (value * 360), duration: 3) { completed in
+                if completed {
+                    print("animation stopped, completed")
+                } else {
+                    print("animation stopped, was interrupted")
+                }
+            }
+    }
+        
+        
+        
+        
+    }
+    
     
     
 
@@ -80,42 +125,33 @@ class IndicatorViewController: UIViewController {
     
     
     
-    func blackAndWhiteImage(image: UIImage) -> UIImage {
-        let context = CIContext(options: nil)
-        let ciImage = CoreImage.CIImage(image: image)!
-        
-        // Set image color to b/w
-        let bwFilter = CIFilter(name: "CIColorControls")!
-        bwFilter.setValuesForKeys([kCIInputImageKey:ciImage, kCIInputBrightnessKey:NSNumber(value: 0.0), kCIInputContrastKey:NSNumber(value: 1.1), kCIInputSaturationKey:NSNumber(value: 0.0)])
-        let bwFilterOutput = (bwFilter.outputImage)!
-        
-        // Adjust exposure
-        let exposureFilter = CIFilter(name: "CIExposureAdjust")!
-        exposureFilter.setValuesForKeys([kCIInputImageKey:bwFilterOutput, kCIInputEVKey:NSNumber(value: 0.7)])
-        let exposureFilterOutput = (exposureFilter.outputImage)!
-        
-        // Create UIImage from context
-        let bwCGIImage = context.createCGImage(exposureFilterOutput, from: ciImage.extent)
-        let resultImage = UIImage(cgImage: bwCGIImage!, scale: 1.0, orientation: image.imageOrientation)
-        
-        return resultImage
+
+}
+
+public extension UIView {
+    
+    /**
+     Fade in a view with a duration
+     
+     - parameter duration: custom animation duration
+     */
+    func fadeIn(withDuration duration: TimeInterval = 5.0) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 1.0
+        })
     }
-    
-    
-    
-    
-    
+    /**
+     Fade out a view with a duration
+     
+     - parameter duration: custom animation duration
+     */
+    func fadeOut(withDuration duration: TimeInterval = 1.0) {
+            UIView.animate(withDuration: duration, animations: {
+                self.alpha = 0.0
+            })
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
 
 

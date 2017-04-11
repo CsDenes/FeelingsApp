@@ -14,15 +14,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  setupCameraSession()
+        setupCameraSession()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-     //   view.layer.addSublayer(previewLayer)
+        view.layer.addSublayer(previewLayer)
         
-      //  cameraSession.startRunning()
+        cameraSession.startRunning()
     }
     
     lazy var cameraSession: AVCaptureSession = {
@@ -72,10 +72,16 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         // Here you collect each frame and process it
+        
+        
+        
         if boolVal {
         if let image = imageFromSampleBuffer(sampleBuffer: sampleBuffer) {
-            WebService.PostImage(image: image)
-            print (image)
+            ImageProcessor.shared.detectFace(imageToDetect: image)
+            //WebService.PostImage(image: ImageProcessor.shared.faceImage!)
+            //Notification to IndicatorViewController
+            NotificationCenter.default.post(name: Notification.Name("ChangeImage"), object: nil)
+            
         }
         boolVal = false
         }
@@ -128,6 +134,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     @IBAction func setBoolValue(_ sender: Any) {
         boolVal = true
+//        let image = UIImage(named: "test.jpg")
+//        ImageProcessor.shared.detectFace(imageToDetect: image!)
+//        NotificationCenter.default.post(name: Notification.Name("ChangeImage"), object: nil)
+        
         
     }
     

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-mq-l2q">
-                                <rect key="frame" x="76" y="34" width="46" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -77,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZN1-wU-w1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="-151"/>
+            <point key="canvasLocation" x="773.60000000000002" y="-151.57421289355324"/>
         </scene>
         <!--Indicator View Controller-->
         <scene sceneID="hoC-WF-qWO">
@@ -91,175 +92,239 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QdF-Y0-ZEB" customClass="KDCircularProgress" customModule="KDCircularProgress">
-                                <rect key="frame" x="148" y="266" width="79" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvB-Ua-svb">
-                                        <rect key="frame" x="18" y="30" width="43" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbX-Co-GLW" customClass="KDCircularProgress" customModule="KDCircularProgress">
-                                <rect key="frame" x="133" y="20" width="79" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS6-Jf-tv6">
-                                        <rect key="frame" x="18" y="30" width="43" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xls-eO-MTd" customClass="KDCircularProgress" customModule="KDCircularProgress">
-                                <rect key="frame" x="280" y="201" width="79" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXt-7a-Oun">
-                                        <rect key="frame" x="18" y="30" width="43" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-F3-ps5" customClass="KDCircularProgress" customModule="KDCircularProgress">
-                                <rect key="frame" x="280" y="84" width="79" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxo-vb-zrX">
-                                        <rect key="frame" x="18" y="30" width="43" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVS-xE-kFe" customClass="KDCircularProgress" customModule="KDCircularProgress">
-                                <rect key="frame" x="9" y="208" width="79" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <real key="value" value="-90"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFO-i0-ApS">
-                                <rect key="frame" x="53" y="305" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vL8-PH-TqP">
-                                <rect key="frame" x="109" y="109" width="150" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VEQ-ga-PzU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qC-tl-KUe" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
-                                <rect key="frame" x="79" y="126" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-d9-6M4" userLabel="Circular Progress 1" customClass="KDCircularProgress" customModule="KDCircularProgress">
+                                <rect key="frame" x="269" y="91" width="75" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfJ-7b-fKo">
+                                        <rect key="frame" x="23.5" y="31.5" width="29" height="12"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hJ5-d9-6M4" secondAttribute="height" multiplier="1:1" id="2tx-iH-1hQ"/>
+                                    <constraint firstItem="PfJ-7b-fKo" firstAttribute="centerY" secondItem="hJ5-d9-6M4" secondAttribute="centerY" id="9e4-Ba-R81"/>
+                                    <constraint firstItem="PfJ-7b-fKo" firstAttribute="centerX" secondItem="hJ5-d9-6M4" secondAttribute="centerX" id="XPs-6Q-xYu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xls-eO-MTd" userLabel="Circular Progress 2" customClass="KDCircularProgress" customModule="KDCircularProgress">
+                                <rect key="frame" x="269" y="196" width="75" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disgust" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCN-iE-2iM">
+                                        <rect key="frame" x="19.5" y="31.5" width="36.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xls-eO-MTd" secondAttribute="height" multiplier="1:1" id="3wm-KN-toc"/>
+                                    <constraint firstItem="dCN-iE-2iM" firstAttribute="centerX" secondItem="Xls-eO-MTd" secondAttribute="centerX" id="BNs-iU-d5y"/>
+                                    <constraint firstItem="dCN-iE-2iM" firstAttribute="centerY" secondItem="Xls-eO-MTd" secondAttribute="centerY" id="fMc-ni-tes"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdF-Y0-ZEB" customClass="KDCircularProgress" customModule="KDCircularProgress">
+                                <rect key="frame" x="150" y="275" width="75" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-s4-A1F">
+                                        <rect key="frame" x="27" y="31.5" width="21.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="sKA-s4-A1F" firstAttribute="centerX" secondItem="QdF-Y0-ZEB" secondAttribute="centerX" id="JvS-tV-nNb"/>
+                                    <constraint firstAttribute="width" secondItem="QdF-Y0-ZEB" secondAttribute="height" multiplier="1:1" id="ORu-m4-Lin"/>
+                                    <constraint firstItem="sKA-s4-A1F" firstAttribute="centerY" secondItem="QdF-Y0-ZEB" secondAttribute="centerY" id="QDV-WU-TQ1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVS-xE-kFe" customClass="KDCircularProgress" customModule="KDCircularProgress">
+                                <rect key="frame" x="24" y="196.5" width="75" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bJ-rc-gq1">
+                                        <rect key="frame" x="22" y="31.5" width="31" height="12"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1bJ-rc-gq1" firstAttribute="centerX" secondItem="yVS-xE-kFe" secondAttribute="centerX" id="8c0-IU-GRP"/>
+                                    <constraint firstAttribute="width" secondItem="yVS-xE-kFe" secondAttribute="height" multiplier="1:1" id="XP9-xw-JK4"/>
+                                    <constraint firstItem="1bJ-rc-gq1" firstAttribute="centerY" secondItem="yVS-xE-kFe" secondAttribute="centerY" id="jcv-Su-Qwi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3h9-Qs-DnR" customClass="KDCircularProgress" customModule="KDCircularProgress">
+                                <rect key="frame" x="24" y="91.5" width="75" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJK-7t-J9b">
+                                        <rect key="frame" x="28.5" y="32" width="18.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="YJK-7t-J9b" firstAttribute="centerX" secondItem="3h9-Qs-DnR" secondAttribute="centerX" id="BV3-hb-4i7"/>
+                                    <constraint firstItem="YJK-7t-J9b" firstAttribute="centerY" secondItem="3h9-Qs-DnR" secondAttribute="centerY" id="Xwc-3z-LdK"/>
+                                    <constraint firstAttribute="width" secondItem="3h9-Qs-DnR" secondAttribute="height" multiplier="1:1" id="tJp-NP-qgT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbX-Co-GLW" customClass="KDCircularProgress" customModule="KDCircularProgress">
+                                <rect key="frame" x="150" y="21" width="75" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suprise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7k-es-hoG">
+                                        <rect key="frame" x="19.5" y="31.5" width="36.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="e7k-es-hoG" firstAttribute="centerY" secondItem="xbX-Co-GLW" secondAttribute="centerY" id="CKn-qj-6OM"/>
+                                    <constraint firstItem="e7k-es-hoG" firstAttribute="centerX" secondItem="xbX-Co-GLW" secondAttribute="centerX" id="R85-EF-IiV"/>
+                                    <constraint firstAttribute="width" secondItem="xbX-Co-GLW" secondAttribute="height" multiplier="1:1" id="fch-3r-QJl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="230"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vL8-PH-TqP">
+                                <rect key="frame" x="109" y="106.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vL8-PH-TqP" secondAttribute="height" multiplier="1:1" id="8Ey-Qm-urE"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qC-tl-KUe" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
+                                <rect key="frame" x="34.5" y="115" width="306" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4qC-tl-KUe" secondAttribute="height" multiplier="3:1" constant="-144" id="CHx-Mh-mKd"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3h9-Qs-DnR" customClass="KDCircularProgress" customModule="KDCircularProgress">
-                                <rect key="frame" x="16" y="84" width="79" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJK-7t-J9b">
-                                        <rect key="frame" x="0.0" y="59" width="53" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
-                                        <real key="value" value="150"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="centerY" secondItem="p0e-2C-OUg" secondAttribute="centerY" constant="-8.5" id="3xR-qU-chg"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="bottom" secondItem="Xls-eO-MTd" secondAttribute="bottom" constant="-15" id="4LY-5F-dTf"/>
+                            <constraint firstAttribute="bottom" secondItem="VEQ-ga-PzU" secondAttribute="bottom" id="4iH-5k-yiM"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="leading" secondItem="3h9-Qs-DnR" secondAttribute="trailing" constant="10" id="69l-U4-T5d"/>
+                            <constraint firstItem="Xls-eO-MTd" firstAttribute="leading" secondItem="vL8-PH-TqP" secondAttribute="trailing" constant="10" id="7BD-CB-LQ1"/>
+                            <constraint firstItem="hJ5-d9-6M4" firstAttribute="leading" secondItem="vL8-PH-TqP" secondAttribute="trailing" constant="10" id="9n1-7H-MGu"/>
+                            <constraint firstItem="VEQ-ga-PzU" firstAttribute="leading" secondItem="p0e-2C-OUg" secondAttribute="leading" id="EGh-Le-gT7"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="bottom" secondItem="yVS-xE-kFe" secondAttribute="bottom" constant="-15" id="GpW-YQ-gru"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="top" secondItem="hJ5-d9-6M4" secondAttribute="top" constant="15" id="JCA-nG-cYQ"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="centerX" secondItem="p0e-2C-OUg" secondAttribute="centerX" constant="-3.5" id="KLI-6M-YJK"/>
+                            <constraint firstItem="VEQ-ga-PzU" firstAttribute="top" secondItem="hdR-ZG-lTu" secondAttribute="bottom" id="OAM-fU-6Pb"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="top" secondItem="xbX-Co-GLW" secondAttribute="bottom" constant="10" id="OkL-EQ-D4N"/>
+                            <constraint firstItem="xbX-Co-GLW" firstAttribute="centerX" secondItem="p0e-2C-OUg" secondAttribute="centerX" id="RAf-Fv-GhG"/>
+                            <constraint firstItem="4qC-tl-KUe" firstAttribute="height" secondItem="vL8-PH-TqP" secondAttribute="height" id="SGY-wP-FMz"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="width" secondItem="3h9-Qs-DnR" secondAttribute="height" multiplier="2:1" id="TqG-t1-PU3"/>
+                            <constraint firstItem="4qC-tl-KUe" firstAttribute="centerX" secondItem="p0e-2C-OUg" secondAttribute="centerX" id="Xsl-CX-oOX"/>
+                            <constraint firstItem="QdF-Y0-ZEB" firstAttribute="centerX" secondItem="p0e-2C-OUg" secondAttribute="centerX" id="Xzv-1W-hYN"/>
+                            <constraint firstItem="4qC-tl-KUe" firstAttribute="centerY" secondItem="p0e-2C-OUg" secondAttribute="centerY" id="Z0P-yu-f6a"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="leading" secondItem="yVS-xE-kFe" secondAttribute="trailing" constant="10" id="ZLv-ay-LtF"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="width" secondItem="hJ5-d9-6M4" secondAttribute="height" multiplier="2:1" id="b7P-TX-LVf"/>
+                            <constraint firstItem="QdF-Y0-ZEB" firstAttribute="top" secondItem="4qC-tl-KUe" secondAttribute="bottom" constant="10" id="bGb-xr-i3n"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="width" secondItem="QdF-Y0-ZEB" secondAttribute="height" multiplier="2:1" id="d3F-kM-PFp"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="width" secondItem="xbX-Co-GLW" secondAttribute="height" multiplier="2:1" id="euv-bq-EJ0"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="width" secondItem="yVS-xE-kFe" secondAttribute="height" multiplier="2:1" id="k2H-bj-dZ7"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="width" secondItem="p0e-2C-OUg" secondAttribute="height" multiplier="1:2" constant="-40" id="nEK-kE-irM"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="width" secondItem="Xls-eO-MTd" secondAttribute="height" multiplier="2:1" id="qW9-Jo-ygN"/>
+                            <constraint firstItem="vL8-PH-TqP" firstAttribute="top" secondItem="3h9-Qs-DnR" secondAttribute="top" constant="15" id="vFs-Kd-5Ju"/>
+                            <constraint firstAttribute="trailing" secondItem="VEQ-ga-PzU" secondAttribute="trailing" id="x4m-5Y-gti"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="faceImage" destination="vL8-PH-TqP" id="5ty-WZ-PNe"/>
-                        <outlet property="progressHa" destination="3h9-Qs-DnR" id="Kwq-tj-yUE"/>
-                        <outlet property="testLabel" destination="YJK-7t-J9b" id="Yth-Fg-pAt"/>
+                        <outlet property="progressAn" destination="hJ5-d9-6M4" id="V6G-90-pdc"/>
+                        <outlet property="progressDi" destination="Xls-eO-MTd" id="sa6-Mn-5j5"/>
+                        <outlet property="progressFe" destination="QdF-Y0-ZEB" id="V92-K0-QrO"/>
+                        <outlet property="progressHa" destination="yVS-xE-kFe" id="gbn-sV-3Iz"/>
+                        <outlet property="progressSa" destination="3h9-Qs-DnR" id="ycd-36-Xzz"/>
+                        <outlet property="progressSu" destination="xbX-Co-GLW" id="G1H-V0-Uh0"/>
                         <outlet property="waveformView" destination="4qC-tl-KUe" id="nYl-HV-q6L"/>
                     </connections>
                 </viewController>
@@ -276,4 +341,7 @@
             <point key="canvasLocation" x="489" y="851"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpg" width="852" height="480"/>
+    </resources>
 </document>
