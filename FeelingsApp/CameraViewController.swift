@@ -6,15 +6,22 @@
 //  Copyright © 2017. Denes Csizmadia. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import AVFoundation
+import CoreAudio
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
     var boolVal: Bool = false
+    var timer:Timer?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCameraSession()
+        
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(CameraViewController.setBool(_:)), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,10 +47,15 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }()
     
     func setupCameraSession() {
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
+        let captureDevice =  AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .front)
+
+            //AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
+        
+       
         
         do {
             let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
+            
             
             cameraSession.beginConfiguration()
             
@@ -78,8 +90,8 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         if boolVal {
         if let image = imageFromSampleBuffer(sampleBuffer: sampleBuffer) {
             ImageProcessor.shared.detectFace(imageToDetect: image)
-            //WebService.PostImage(image: ImageProcessor.shared.faceImage!)
             //Notification to IndicatorViewController
+             WebService.PostImage(image: ImageProcessor.shared.faceImage!)
             NotificationCenter.default.post(name: Notification.Name("ChangeImage"), object: nil)
             
         }
@@ -139,6 +151,11 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        NotificationCenter.default.post(name: Notification.Name("ChangeImage"), object: nil)
         
         
+    }
+    
+    
+    func setBool(_ sender: Any) {
+    boolVal = true
     }
     
     

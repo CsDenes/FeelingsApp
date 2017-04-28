@@ -15,7 +15,7 @@ class WebService {
     
     
     class func PostImage(image: UIImage){
-        let postURI = "http://192.168.21.123:8000/images/" //
+        let postURI = "http://192.168.43.4:8000/images/" //
         //        let startIndex = image.index(image.startIndex, offsetBy: 0)
 //        let endIndex = image.index(image.startIndex, offsetBy: 200)
         let imageData:NSData = UIImagePNGRepresentation(image)! as NSData
@@ -48,7 +48,7 @@ class WebService {
             
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ChangeIndicators"), object: nil, userInfo: dict)
             
-                print((dict?["ha"] as! Double))
+                print(dict)
             
                      }
         

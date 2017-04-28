@@ -43,25 +43,40 @@ class ImageProcessor {
     
     func detectFace(imageToDetect: UIImage){
         
-        guard let personciImage = CIImage(image: imageToDetect) else {
+        let Rotatedimage = imageRotatedByDegrees(oldImage: imageToDetect, deg: 90)
+        var image = Rotatedimage
+        
+        
+        guard let personciImage = CIImage(image: image) else {
             return
         }
         
+
         let accuracy = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
         let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy)
         let faces = faceDetector?.features(in: personciImage)
         
-        var image = imageToDetect
+        if (faces?.count)! > 0 {
         if let face = faces?[0]{
-            image = cropImage(imageToCrop: imageToDetect, toRect: (face.bounds))
+            image = cropImage(imageToCrop: Rotatedimage, toRect: (face.bounds))
         }
-        self.faceViewImage = image
+                self.faceViewImage = image
         
-        image = resizeImage(image: image, size: 100)!
+        image = resizeImage(image: image, size: 299)!
+        
+            
+        //test
+            let dict = ["an": 1, "di": 1, "fe": 1, "ha": 1, "sa": 1, "su": 1]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "ChangeIndicators"), object: nil, userInfo: dict)
+            
+            
+        }
         
         self.blackAndWhiteImage = blackAndWhiteImage(image: image)
         
         self.faceImage = image
+      
+       
         
     }
     
