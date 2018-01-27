@@ -18,6 +18,7 @@
 		944A50B21E73F8AB00D654D6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A50B11E73F8AB00D654D6 /* CameraViewController.swift */; };
 		944A50B51E74031F00D654D6 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A50B41E74031F00D654D6 /* IndicatorViewController.swift */; };
 		944A50B81E74035D00D654D6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A50B71E74035D00D654D6 /* WebService.swift */; };
+		947043481F39F88200929499 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 947043471F39F88200929499 /* AudioKit.framework */; };
 		9493A7721E86E0620059D12D /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 9493A7711E86E0620059D12D /* testImage.png */; };
 		9493A7761E89ADCD0059D12D /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493A7751E89ADCD0059D12D /* ImageProcessor.swift */; };
 		94B6FA061E90F7A600C2610E /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94B6FA051E90F7A600C2610E /* background.jpg */; };
@@ -60,6 +61,7 @@
 		944A50B11E73F8AB00D654D6 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		944A50B41E74031F00D654D6 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
 		944A50B71E74035D00D654D6 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		947043471F39F88200929499 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = ../../../../../Users/Denes/Developer/AudioKit/Frameworks/build/Release/AudioKit.framework; sourceTree = "<group>"; };
 		9493A7711E86E0620059D12D /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
 		9493A7751E89ADCD0059D12D /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		94B6FA051E90F7A600C2610E /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947043481F39F88200929499 /* AudioKit.framework in Frameworks */,
 				85AD18893B81702CE32635D5 /* Pods_FeelingsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +99,7 @@
 		24F3A2124B5123564DE4D7B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				947043471F39F88200929499 /* AudioKit.framework */,
 				C80B066F11A2EADF70D7D490 /* Pods_FeelingsApp.framework */,
 			);
 			name = Frameworks;
@@ -365,7 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

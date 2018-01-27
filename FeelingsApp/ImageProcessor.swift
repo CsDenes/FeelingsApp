@@ -121,6 +121,9 @@ class ImageProcessor {
         let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return newImage
-    }    
+    }
+    
+    
+    
     
 }
